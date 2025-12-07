@@ -1,0 +1,1047 @@
+/* ========================================
+   GLOBÁLNÍ STYLY
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Barevná paleta - teplé, dětské, vintage barvy */
+    --primary-color: #FF6B6B;
+    --secondary-color: #4ECDC4;
+    --accent-color: #FFE66D;
+    --background-color: #FFF5E6;
+    --panel-bg: #FFFFFF;
+    --text-color: #2C3E50;
+    --shadow-color: rgba(0, 0, 0, 0.15);
+
+    /* Barvy postav */
+    --pipi-hair: #FF8C42;
+    --pipi-dress: #FF6B9D;
+    --pipi-socks: #4ECDC4;
+    --tommy-shirt: #6C5CE7;
+    --annika-dress: #FFA07A;
+    --inspector-suit: #34495E;
+    --parrot-green: #55EFC4;
+    --parrot-red: #FF6B6B;
+
+    /* Rozměry */
+    --panel-border: 4px;
+    --border-radius: 12px;
+}
+
+body {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: var(--text-color);
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   HLAVNÍ KONTEJNER
+   ======================================== */
+
+.comic-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--background-color);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* ========================================
+   HLAVIČKA
+   ======================================== */
+
+.comic-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #FF8E53 100%);
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.comic-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.1) 10px,
+        rgba(255, 255, 255, 0.1) 20px
+    );
+    animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.comic-title {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 2px;
+}
+
+.progress-bar {
+    width: 80%;
+    max-width: 400px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin: 15px auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    border: 3px solid white;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color) 0%, #FFD93D 100%);
+    border-radius: 10px;
+    transition: width 0.5s ease;
+    box-shadow: 0 0 10px rgba(255, 230, 109, 0.8);
+}
+
+.page-counter {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   STRÁNKY KOMIKSU
+   ======================================== */
+
+.comic-pages {
+    position: relative;
+    min-height: 600px;
+    background: white;
+}
+
+.page {
+    display: none;
+    padding: 40px 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   PANELY
+   ======================================== */
+
+.panel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.panel {
+    background: var(--panel-bg);
+    border: var(--panel-border) solid var(--text-color);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    position: relative;
+    min-height: 200px;
+    box-shadow: 5px 5px 0 var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 0 var(--shadow-color);
+}
+
+.panel-large {
+    grid-column: span 2;
+}
+
+.panel-wide {
+    grid-column: span 2;
+    min-height: 150px;
+}
+
+.panel-tall {
+    grid-row: span 2;
+    min-height: 400px;
+}
+
+/* ========================================
+   SCÉNY
+   ======================================== */
+
+.scene {
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Pozadí scén */
+.villa-exterior {
+    background: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 100%);
+}
+
+.town-hall {
+    background: linear-gradient(180deg, #D4A574 0%, #F5DEB3 100%);
+}
+
+.street {
+    background: linear-gradient(180deg, #87CEEB 0%, #C8C8C8 70%);
+}
+
+.harbor {
+    background: linear-gradient(180deg, #4A90E2 0%, #357ABD 100%);
+}
+
+.old-workshop {
+    background: linear-gradient(180deg, #8B7355 0%, #D2B48C 100%);
+}
+
+.bakery-exterior {
+    background: linear-gradient(180deg, #FFE5B4 0%, #FFDAB9 100%);
+}
+
+.behind-bakery {
+    background: linear-gradient(180deg, #90EE90 0%, #8FBC8F 100%);
+}
+
+.sunset.villa {
+    background: linear-gradient(180deg, #FF6B6B 0%, #FFE66D 50%, #4ECDC4 100%);
+}
+
+.villa-yard {
+    background: linear-gradient(180deg, #98D8C8 0%, #6BCF7F 100%);
+}
+
+.sky {
+    background: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 100%);
+}
+
+.final {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* ========================================
+   POSTAVY (CSS ilustrace)
+   ======================================== */
+
+.character {
+    position: relative;
+    width: 80px;
+    height: 120px;
+    margin: 10px;
+}
+
+/* PIPI */
+.character.pipi::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 70px;
+    background: var(--pipi-dress);
+    border-radius: 25px 25px 0 0;
+    border: 3px solid var(--text-color);
+}
+
+.character.pipi::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: #FFD1A3;
+    border-radius: 50%;
+    border: 3px solid var(--text-color);
+}
+
+/* Pipi vlasy (copy) */
+.character.pipi {
+    background:
+        radial-gradient(circle at 20% 20%, var(--pipi-hair) 8px, transparent 8px),
+        radial-gradient(circle at 80% 20%, var(--pipi-hair) 8px, transparent 8px);
+    background-repeat: no-repeat;
+}
+
+/* Tommy */
+.character.tommy::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 65px;
+    background: var(--tommy-shirt);
+    border-radius: 20px 20px 0 0;
+    border: 3px solid var(--text-color);
+}
+
+.character.tommy::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 35px;
+    background: #FFD1A3;
+    border-radius: 50%;
+    border: 3px solid var(--text-color);
+}
+
+/* Annika */
+.character.annika::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 65px;
+    background: var(--annika-dress);
+    border-radius: 20px 20px 0 0;
+    border: 3px solid var(--text-color);
+}
+
+.character.annika::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 35px;
+    background: #FFD1A3;
+    border-radius: 50%;
+    border: 3px solid var(--text-color);
+}
+
+/* Inspektor */
+.character.inspector::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 75px;
+    background: var(--inspector-suit);
+    border-radius: 25px 25px 0 0;
+    border: 3px solid var(--text-color);
+}
+
+.character.inspector::after {
+    content: '👨‍💼';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 35px;
+}
+
+/* Papoušek */
+.character.parrot {
+    width: 50px;
+    height: 50px;
+}
+
+.character.parrot::before {
+    content: '🦜';
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: bobbing 2s ease-in-out infinite;
+}
+
+@keyframes bobbing {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.character.parrot.flying::before {
+    animation: flying 3s ease-in-out infinite;
+}
+
+@keyframes flying {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(10px, -10px) rotate(5deg); }
+    75% { transform: translate(-10px, -10px) rotate(-5deg); }
+}
+
+/* Kočka */
+.character.cat {
+    width: 60px;
+    height: 40px;
+}
+
+.character.cat::before {
+    content: '🐱';
+    font-size: 35px;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Kůň */
+.horse {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 60px;
+}
+
+.horse::before {
+    content: '🐴';
+}
+
+.horse.elevated {
+    bottom: 80px;
+    animation: lifted 1s ease-in-out;
+}
+
+@keyframes lifted {
+    0% { bottom: 10px; }
+    100% { bottom: 80px; }
+}
+
+/* ========================================
+   OBJEKTY
+   ======================================== */
+
+/* Vila */
+.villa {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 120px;
+    background: #D2691E;
+    border: 4px solid var(--text-color);
+    border-radius: 0 0 10px 10px;
+}
+
+.villa::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 50px solid #8B4513;
+    border-bottom-color: var(--primary-color);
+}
+
+.villa::after {
+    content: '🏠';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+}
+
+/* Slunce */
+.sun {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, #FFD93D 0%, #FF9800 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255, 217, 61, 0.8);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Mraky */
+.clouds {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+}
+
+.clouds::before,
+.clouds::after {
+    content: '☁️';
+    font-size: 40px;
+    position: absolute;
+    animation: drift 20s linear infinite;
+}
+
+.clouds::after {
+    left: 100px;
+    animation-delay: 5s;
+}
+
+@keyframes drift {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(300px); }
+}
+
+/* Kufr */
+.briefcase {
+    position: relative;
+    width: 70px;
+    height: 50px;
+    background: #8B4513;
+    border: 3px solid var(--text-color);
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+.briefcase::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 10px;
+    background: #654321;
+    border: 2px solid var(--text-color);
+    border-radius: 3px;
+}
+
+.briefcase::after {
+    content: '💼';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+}
+
+.briefcase.missing {
+    opacity: 0.3;
+    filter: blur(2px);
+}
+
+/* Dveře */
+.door {
+    width: 60px;
+    height: 100px;
+    background: #8B4513;
+    border: 3px solid var(--text-color);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    margin: 0 auto;
+}
+
+.door::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    background: gold;
+    border-radius: 50%;
+}
+
+.door.broken {
+    transform: rotate(20deg) translateY(20px);
+    opacity: 0.5;
+    animation: fall 0.5s ease;
+}
+
+@keyframes fall {
+    0% { transform: rotate(0) translateY(0); }
+    100% { transform: rotate(20deg) translateY(20px); }
+}
+
+/* Loď */
+.ship {
+    position: absolute;
+    bottom: 20px;
+    left: 20%;
+    font-size: 80px;
+}
+
+.ship::before {
+    content: '🚢';
+}
+
+.ship.moved {
+    left: 60%;
+    animation: moveShip 2s ease;
+}
+
+@keyframes moveShip {
+    0% { left: 20%; }
+    100% { left: 60%; }
+}
+
+/* Lampa */
+.lamp-post {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 120px;
+    background: #444;
+    border-radius: 5px;
+}
+
+.lamp-post::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #FFD93D 0%, #FFA500 100%);
+    border-radius: 50%;
+    border: 3px solid #444;
+    box-shadow: 0 0 20px rgba(255, 217, 61, 0.6);
+}
+
+/* Cedule pekárny */
+.bakery-sign {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: white;
+    border: 3px solid var(--text-color);
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.bakery-sign::before {
+    content: '🥖 PEKÁRNA 🥐';
+}
+
+/* ========================================
+   BUBLINY S TEXTEM
+   ======================================== */
+
+.speech-bubble {
+    position: relative;
+    background: white;
+    border: 3px solid var(--text-color);
+    border-radius: 15px;
+    padding: 12px 15px;
+    margin: 10px 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    box-shadow: 3px 3px 0 var(--shadow-color);
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 15px solid var(--text-color);
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 32px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 12px solid white;
+}
+
+.speech-bubble.left::before {
+    left: 30px;
+}
+
+.speech-bubble.right::before {
+    left: auto;
+    right: 30px;
+}
+
+.speech-bubble.right::after {
+    left: auto;
+    right: 32px;
+}
+
+.speech-bubble.pipi-bubble {
+    background: linear-gradient(135deg, #FFE5E5 0%, #FFF0F5 100%);
+    border-color: var(--pipi-dress);
+}
+
+.speech-bubble.inspector-bubble {
+    background: #E8E8E8;
+    border-color: var(--inspector-suit);
+}
+
+.speech-bubble.parrot-bubble {
+    background: linear-gradient(135deg, #E0FFE0 0%, #F0FFF0 100%);
+    border-color: var(--parrot-green);
+}
+
+.speech-bubble.thought {
+    border-style: dashed;
+    background: #F0F0F0;
+}
+
+.speech-bubble.thought::before,
+.speech-bubble.thought::after {
+    display: none;
+}
+
+.speech-bubble.whisper {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/* ========================================
+   TITULKY A EFEKTY
+   ======================================== */
+
+.caption {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid var(--text-color);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    box-shadow: 2px 2px 0 var(--shadow-color);
+}
+
+.sound-effect {
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 0 white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white;
+    transform: rotate(-10deg);
+    animation: bounce 0.5s ease infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: rotate(-10deg) scale(1); }
+    to { transform: rotate(-10deg) scale(1.1); }
+}
+
+.sound-effect.huge {
+    font-size: 2rem;
+    top: 20%;
+    right: 10%;
+}
+
+.sound-effect.massive {
+    font-size: 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+}
+
+.sound-effect.flutter {
+    font-size: 1rem;
+    top: 10px;
+    right: 10px;
+}
+
+.title-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    border: 5px solid var(--text-color);
+    border-radius: 20px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.title-overlay h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-shadow: 3px 3px 0 var(--accent-color);
+    text-align: center;
+}
+
+.the-end {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle, white 2px, transparent 2px),
+        radial-gradient(circle, white 1px, transparent 1px),
+        radial-gradient(circle, white 1.5px, transparent 1.5px);
+    background-size: 100px 100px, 150px 150px, 200px 200px;
+    background-position: 0 0, 50px 50px, 100px 100px;
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* ========================================
+   NAVIGACE
+   ======================================== */
+
+.comic-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background: var(--background-color);
+    border-top: 4px solid var(--text-color);
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: inherit;
+    color: white;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #45B7AA 100%);
+    border: 3px solid var(--text-color);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 0 var(--shadow-color);
+}
+
+.nav-button:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0 var(--shadow-color);
+}
+
+.nav-button:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 2px 2px 0 var(--shadow-color);
+}
+
+.nav-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.nav-button .arrow {
+    font-size: 1.5rem;
+}
+
+/* Tečky pro stránky */
+.page-dots {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 400px;
+}
+
+.page-dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #D0D0D0;
+    border: 2px solid var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-dot:hover {
+    transform: scale(1.2);
+}
+
+.page-dot.active {
+    background: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+    transform: scale(1.3);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.comic-footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--text-color);
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   RESPONZIVNÍ DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    .comic-title {
+        font-size: 1.8rem;
+    }
+
+    .panel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-large,
+    .panel-wide,
+    .panel-tall {
+        grid-column: span 1;
+        grid-row: span 1;
+        min-height: 200px;
+    }
+
+    .nav-button .label {
+        display: none;
+    }
+
+    .page-dots {
+        gap: 8px;
+    }
+
+    .page-dot {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .comic-title {
+        font-size: 1.5rem;
+    }
+
+    .page {
+        padding: 20px 10px;
+    }
+
+    .comic-navigation {
+        padding: 20px 15px;
+    }
+
+    .nav-button {
+        padding: 12px 20px;
+    }
+}
+
+/* ========================================
+   ANIMACE PRO INTERAKTIVITU
+   ======================================== */
+
+.panel.clicked {
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Hovering efekty pro postavy */
+.character {
+    transition: transform 0.3s ease;
+}
+
+.character:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    body {
+        background: white;
+    }
+
+    .comic-navigation,
+    .comic-header .progress-bar,
+    .comic-footer {
+        display: none;
+    }
+
+    .page {
+        display: block !important;
+        page-break-after: always;
+    }
+}

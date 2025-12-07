@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipi a záhada zmizelého kufru - Interaktivní komiks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="comic-container">
+        <!-- Hlavička -->
+        <header class="comic-header">
+            <h1 class="comic-title">Pipi a záhada zmizelého kufru</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            <p class="page-counter"><span id="currentPage">1</span> / <span id="totalPages">10</span></p>
+        </header>
+
+        <!-- Stránky komiksu -->
+        <div class="comic-pages" id="comicPages">
+
+            <!-- Stránka 1: Úvod -->
+            <div class="page active" data-page="1">
+                <div class="panel-grid">
+                    <div class="panel panel-large">
+                        <div class="scene villa-exterior">
+                            <div class="title-overlay">
+                                <h2>Pipi a záhada zmizelého kufru</h2>
+                            </div>
+                            <div class="villa"></div>
+                            <div class="sun"></div>
+                            <div class="clouds"></div>
+                        </div>
+                        <div class="caption">Byl krásný slunečný den ve Ville Vilekula...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character tommy"></div>
+                            <div class="character annika"></div>
+                            <div class="door"></div>
+                        </div>
+                        <div class="speech-bubble left">Tommy: Myslíš, že je doma?</div>
+                        <div class="speech-bubble right">Annika: S Pipi nikdy nevíš...</div>
+                    </div>
+
+                    <div class="panel panel-tall">
+                        <div class="scene">
+                            <div class="character pipi lifting-horse"></div>
+                            <div class="horse elevated"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Pipi: Ahoj! Zrovna zvedám koně, aby měl lepší výhled!</div>
+                        <div class="sound-effect">ZDVIH!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character tommy shocked"></div>
+                            <div class="character annika shocked"></div>
+                        </div>
+                        <div class="speech-bubble">Tommy & Annika: PIPI!!!</div>
+                    </div>
+
+                    <div class="panel panel-wide">
+                        <div class="scene sky">
+                            <div class="character parrot flying"></div>
+                        </div>
+                        <div class="speech-bubble parrot-bubble">Don Pablo: KRÁÁÁ! KRÁÁÁ! Novinka! Zmizel kufr!</div>
+                        <div class="sound-effect flutter">FRRR FRRR</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 2: Problém -->
+            <div class="page" data-page="2">
+                <div class="panel-grid">
+                    <div class="panel panel-wide">
+                        <div class="scene town-hall">
+                            <div class="character inspector angry"></div>
+                            <div class="briefcase missing"></div>
+                        </div>
+                        <div class="speech-bubble inspector-bubble">Inspektor Klumpr: Můj kufr s Velmi Důležitými Povoleními ZMIZEL!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character inspector pointing"></div>
+                        </div>
+                        <div class="speech-bubble thought">Určitě za tím stojí TA dívka...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character pipi innocent"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Pipi: Já? To by mě nenapadlo! ...Ačkoli...</div>
+                    </div>
+
+                    <div class="panel panel-large">
+                        <div class="scene">
+                            <div class="character pipi determined"></div>
+                            <div class="character tommy"></div>
+                            <div class="character annika"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Pomůžeme vám ho najít! Že ano, Tommy a Annika?</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character inspector worried"></div>
+                        </div>
+                        <div class="speech-bubble">To mě nějak neuklidňuje...</div>
+                        <div class="sound-effect">vzdech</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 3: Začátek pátrání -->
+            <div class="page" data-page="3">
+                <div class="panel-grid">
+                    <div class="panel panel-wide">
+                        <div class="scene street">
+                            <div class="character pipi detective"></div>
+                            <div class="character tommy"></div>
+                            <div class="character annika"></div>
+                        </div>
+                        <div class="caption">Detektivní trio vyráží na pátrání...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="footprint fish-shaped"></div>
+                        </div>
+                        <div class="speech-bubble">Pipi: Podívejte! Stopa ve tvaru rybí kosti!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character tommy confused"></div>
+                        </div>
+                        <div class="speech-bubble">Tommy: To je asi otisk z boty rybáře...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene neighbor-window">
+                            <div class="character neighbor"></div>
+                        </div>
+                        <div class="speech-bubble">Soused: Viděl jsem podezřelou kočku...</div>
+                    </div>
+
+                    <div class="panel panel-tall">
+                        <div class="scene">
+                            <div class="character pipi thinking"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble thought">Hmm... Kočka? To musíme prozkoumat!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 4: Absurdní situace #1 -->
+            <div class="page" data-page="4">
+                <div class="panel-grid">
+                    <div class="panel panel-large">
+                        <div class="scene harbor">
+                            <div class="character pipi super-strong"></div>
+                            <div class="ship floating"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Zkrátíme si cestu přes přístav!</div>
+                        <div class="sound-effect huge">ZVEEEEEDDDDD!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character tommy dizzy"></div>
+                        </div>
+                        <div class="speech-bubble">Tommy: Pipi... to je PARNÍK!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character annika scared"></div>
+                        </div>
+                        <div class="speech-bubble">Annika: A je TĚŽKÝ!</div>
+                    </div>
+
+                    <div class="panel panel-wide">
+                        <div class="scene">
+                            <div class="character pipi carrying-ship"></div>
+                            <div class="ship moved"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Ach, to je legrace! Vážně lehký!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="crowd shocked"></div>
+                        </div>
+                        <div class="sound-effect">ÚŽAS!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 5: Absurdní situace #2 -->
+            <div class="page" data-page="5">
+                <div class="panel-grid">
+                    <div class="panel panel-wide">
+                        <div class="scene old-workshop">
+                            <div class="door-frame"></div>
+                        </div>
+                        <div class="caption">U staré dílny...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character pipi leaning"></div>
+                            <div class="door solid"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Jen se trochu opřu...</div>
+                    </div>
+
+                    <div class="panel panel-tall">
+                        <div class="scene">
+                            <div class="door broken"></div>
+                        </div>
+                        <div class="sound-effect massive">TŘÁÁÁSK!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character pipi oops"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Ouha... Možná jsem se opřela moc...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene inside-workshop">
+                            <div class="old-items"></div>
+                        </div>
+                        <div class="caption">Ale žádný kufr tam nebyl...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 6: Don Pablo dramatizuje -->
+            <div class="page" data-page="6">
+                <div class="panel-grid">
+                    <div class="panel panel-large">
+                        <div class="scene street-lamp">
+                            <div class="character parrot on-lamp"></div>
+                            <div class="lamp-post"></div>
+                        </div>
+                        <div class="speech-bubble parrot-bubble">KRÁÁÁ! Vidím ho! Kufr se pohybuje SÁM!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character pipi excited"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Kde, kde?!</div>
+                    </div>
+
+                    <div class="panel panel-tall">
+                        <div class="scene">
+                            <div class="character parrot falling"></div>
+                        </div>
+                        <div class="speech-bubble parrot-bubble">Ááááá! Padááááám!</div>
+                        <div class="sound-effect">PLÁC!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character pipi catching"></div>
+                            <div class="character parrot caught"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Mám tě!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character parrot dizzy"></div>
+                        </div>
+                        <div class="speech-bubble parrot-bubble">Tamhle... u pekárny...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 7: U pekárny -->
+            <div class="page" data-page="7">
+                <div class="panel-grid">
+                    <div class="panel panel-wide">
+                        <div class="scene bakery-exterior">
+                            <div class="bakery-sign"></div>
+                        </div>
+                        <div class="caption">Pekárna na rohu náměstí...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character pipi sneaking"></div>
+                            <div class="character tommy"></div>
+                            <div class="character annika"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble whisper">Tiše... sledujeme stopu...</div>
+                    </div>
+
+                    <div class="panel panel-large">
+                        <div class="scene behind-bakery">
+                            <div class="briefcase hidden"></div>
+                            <div class="character cat sitting"></div>
+                        </div>
+                        <div class="caption">A pak to uviděli...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character tommy pointing"></div>
+                        </div>
+                        <div class="speech-bubble">Tommy: TEN KUFR!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character cat licking"></div>
+                            <div class="briefcase"></div>
+                        </div>
+                        <div class="speech-bubble">Annika: A ta kočka ho... olizuje?</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 8: Zvrat - řešení záhady -->
+            <div class="page" data-page="8">
+                <div class="panel-grid">
+                    <div class="panel panel-wide">
+                        <div class="scene">
+                            <div class="character pipi detective-hat"></div>
+                            <div class="character cat"></div>
+                            <div class="briefcase open"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Aha! V kufru je levandulová esence!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character cat happy"></div>
+                        </div>
+                        <div class="speech-bubble">Mňau! ♥</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character annika understanding"></div>
+                        </div>
+                        <div class="speech-bubble">Annika: Kočky milují levanduli!</div>
+                    </div>
+
+                    <div class="panel panel-large">
+                        <div class="scene">
+                            <div class="character tommy"></div>
+                            <div class="character cat dragging"></div>
+                            <div class="drag-marks"></div>
+                        </div>
+                        <div class="speech-bubble">Tommy: Proto kufr odtáhla až sem!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character pipi victorious"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Záhada vyřešena!</div>
+                        <div class="sound-effect">HURÁ!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 9: Finále - podmínka -->
+            <div class="page" data-page="9">
+                <div class="panel-grid">
+                    <div class="panel panel-large">
+                        <div class="scene town-hall">
+                            <div class="character inspector relieved"></div>
+                            <div class="briefcase returned"></div>
+                        </div>
+                        <div class="speech-bubble inspector-bubble">Můj kufr! Děkuji vám!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character pipi sly"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Počkejte... mám podmínku!</div>
+                    </div>
+
+                    <div class="panel panel-wide">
+                        <div class="scene">
+                            <div class="character inspector nervous"></div>
+                        </div>
+                        <div class="speech-bubble inspector-bubble worried">Ja-jakou podmínku?</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character pipi determined"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Všechna ta povolení nesmí zakazovat dobrodružství dětí!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character inspector thinking"></div>
+                        </div>
+                        <div class="speech-bubble thought">Nebo by možná zvedla i MĚ...</div>
+                    </div>
+
+                    <div class="panel panel-tall">
+                        <div class="scene">
+                            <div class="character inspector signing"></div>
+                            <div class="document"></div>
+                        </div>
+                        <div class="speech-bubble inspector-bubble">Dobře, dobře... podepíšu!</div>
+                        <div class="sound-effect">ŠKRT ŠKRT</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 10: Epilog -->
+            <div class="page" data-page="10">
+                <div class="panel-grid">
+                    <div class="panel panel-large">
+                        <div class="scene sunset villa">
+                            <div class="villa silhouette"></div>
+                            <div class="sunset-sky"></div>
+                        </div>
+                        <div class="caption">Večer u Villy Vilekula...</div>
+                    </div>
+
+                    <div class="panel panel-wide">
+                        <div class="scene villa-yard">
+                            <div class="character pipi happy"></div>
+                            <div class="character tommy waving"></div>
+                            <div class="character annika waving"></div>
+                        </div>
+                        <div class="speech-bubble">Tommy & Annika: Nashledanou, Pipi!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character pipi talking-to-horse"></div>
+                            <div class="horse"></div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Zítra půjdeme na střechu sledovat červánky, ano?</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="horse nodding"></div>
+                        </div>
+                        <div class="speech-bubble">Hihhihi!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="scene">
+                            <div class="character parrot refusing"></div>
+                        </div>
+                        <div class="speech-bubble parrot-bubble">KRÁÁÁ! Já ne! Mám strach z výšek!</div>
+                    </div>
+
+                    <div class="panel panel-wide">
+                        <div class="scene final">
+                            <div class="the-end">KONEC</div>
+                            <div class="stars"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigace -->
+        <div class="comic-navigation">
+            <button id="prevBtn" class="nav-button" disabled>
+                <span class="arrow">←</span>
+                <span class="label">Předchozí</span>
+            </button>
+
+            <div class="page-dots" id="pageDots"></div>
+
+            <button id="nextBtn" class="nav-button">
+                <span class="label">Další</span>
+                <span class="arrow">→</span>
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="comic-footer">
+            <p>© 2024 Interaktivní komiks pro děti | Autorsky originální dílo</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
