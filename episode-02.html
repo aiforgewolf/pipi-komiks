@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipi a tajemství Villa Vilekula - Epizoda 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="episode-images.css">
+</head>
+<body>
+    <div class="comic-container">
+        <!-- Hlavička -->
+        <header class="comic-header">
+            <a href="index.html" class="back-button" title="Zpět na výběr epizod">
+                <span class="back-arrow">←</span>
+                <span class="back-text">Zpět na výběr</span>
+            </a>
+            <h1 class="comic-title">Pipi a tajemství Villa Vilekula</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            <p class="page-counter"><span id="currentPage">1</span> / <span id="totalPages">10</span></p>
+        </header>
+
+        <!-- Stránky komiksu -->
+        <div class="comic-pages" id="comicPages">
+
+            <!-- Stránka 1: Úvod - Objevení tajné místnosti -->
+            <div class="page active" data-page="1">
+                <div class="panel-grid">
+                    <div class="panel panel-large">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page01-panel01.jpg"
+                                 alt="Villa Vilekula v podvečerním světle"
+                                 data-prompt="Colorful illustration of a quirky villa house at sunset, children's book style, warm colors, whimsical architecture, Swedish countryside setting, digital art, vibrant and playful"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="1">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Villa Vilekula při západu slunce</span>
+                            </div>
+                        </div>
+                        <div class="caption">Několik dní po vyřešení záhady zmizelého kufru...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page01-panel02.jpg"
+                                 alt="Pipi, Tommy a Annika u vily"
+                                 data-prompt="Three children characters in retro children's book style: red-haired girl with pigtails (Pipi) in mismatched stockings, blonde boy (Tommy), and blonde girl with braids (Annika), standing together, cheerful expressions, cartoon illustration"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="2">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Pipi, Tommy a Annika</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Pojďte se podívat na půdu! Možná tam najdeme něco zajímavého!</div>
+                    </div>
+
+                    <div class="panel panel-tall">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page01-panel03.jpg"
+                                 alt="Staré dřevěné schodiště vedoucí na půdu"
+                                 data-prompt="Old wooden attic stairs in vintage villa, dusty atmosphere, warm lighting from window, cobwebs, children's book illustration style, mysterious and inviting mood"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="3">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Schodiště na půdu</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble">Tommy: Je tam trochu strašidelně...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page01-panel04.jpg"
+                                 alt="Skrytá dvířka za starým kobercem"
+                                 data-prompt="Hidden wooden door behind old dusty carpet in attic, mysterious light coming through cracks, vintage children's book illustration, adventure atmosphere, detailed textures"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="4">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Tajná dvířka</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Podívejte! Tady za kobercem jsou nějaká dvířka!</div>
+                        <div class="sound-effect">ŠUSTĚNÍ!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 2: Nalezení mapy -->
+            <div class="page" data-page="2">
+                <div class="panel-grid">
+                    <div class="panel panel-wide">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page02-panel01.jpg"
+                                 alt="Tajná místnost plná starých věcí"
+                                 data-prompt="Secret attic room full of old treasures, vintage furniture, dusty books, mysterious artifacts, warm candlelight, children's adventure book style, rich details, cozy yet mysterious atmosphere"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="5">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Tajná místnost</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble">Annika: Wow! Nikdy jsem tady nebyla!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page02-panel02.jpg"
+                                 alt="Stará truhla s námořnickými symboly"
+                                 data-prompt="Old wooden treasure chest with nautical symbols, brass fittings, slightly open, soft light coming from inside, pirate theme, vintage illustration style, detailed woodwork"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="6">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Námořnická truhla</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">To je tatínkova truhla! Kapitána Efraima Dlouhápunčocha!</div>
+                    </div>
+
+                    <div class="panel panel-large">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page02-panel03.jpg"
+                                 alt="Stará pirátská mapa s označenými místy"
+                                 data-prompt="Old pirate treasure map on parchment paper, hand-drawn town landmarks, X marks the spot, vintage nautical style, weathered edges, sepia tones, children's book illustration"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="7">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Pirátská mapa</span>
+                            </div>
+                        </div>
+                        <div class="caption">V truhle našli starou mapu města...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page02-panel04.jpg"
+                                 alt="Děti studující mapu při svíčkách"
+                                 data-prompt="Three children looking at old map by candlelight, excited expressions, close-up view, vintage children's book illustration, warm lighting, sense of discovery and adventure"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="8">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Studování mapy</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble">Tommy: Je to mapa k pokladu!</div>
+                        <div class="sound-effect">VÝKŘIK!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 3: Plánování výpravy -->
+            <div class="page" data-page="3">
+                <div class="panel-grid">
+                    <div class="panel panel-wide">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page03-panel01.jpg"
+                                 alt="Děti připravují výpravu ve Ville Vilekula"
+                                 data-prompt="Children preparing for treasure hunt adventure, packing supplies, backpacks, map on table, cheerful atmosphere, retro children's book style, bright colors, playful composition"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="9">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Příprava výpravy</span>
+                            </div>
+                        </div>
+                        <div class="caption">Další ráno...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page03-panel02.jpg"
+                                 alt="Pipi s batohem a mapou"
+                                 data-prompt="Red-haired girl with pigtails (Pipi) wearing backpack, holding treasure map, determined expression, mismatched colorful stockings, vintage children's book character, full of energy and confidence"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="10">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Pipi připravená</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">První stopa je u fontány na náměstí!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page03-panel03.jpg"
+                                 alt="Papoušek Don Pablo"
+                                 data-prompt="Colorful parrot character with expressive eyes, perched position, tropical bird, cartoon style, vibrant green and red feathers, friendly and chatty appearance, children's book illustration"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="11">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Don Pablo</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble parrot-bubble">KRÁÁÁ! Já jdu taky! Znám každý kout města!</div>
+                    </div>
+
+                    <div class="panel panel-tall">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page03-panel04.jpg"
+                                 alt="Kůň kouká z okna vily"
+                                 data-prompt="Friendly horse looking out of window of colorful villa, curious expression, vintage children's book style, whimsical and charming, soft lighting"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="12">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Kůň u okna</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble">Kůň: Hihi! Hlídám dům!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 4: První stopa - u fontány -->
+            <div class="page" data-page="4">
+                <div class="panel-grid">
+                    <div class="panel panel-large">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page04-panel01.jpg"
+                                 alt="Náměstí s velkou fontánou"
+                                 data-prompt="Town square with ornate fountain, vintage European architecture, cobblestone plaza, people in background, sunny day, children's book illustration, cheerful and lively atmosphere"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="13">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Městské náměstí</span>
+                            </div>
+                        </div>
+                        <div class="caption">Na náměstí...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page04-panel02.jpg"
+                                 alt="Detail fontány s tajným symbolem"
+                                 data-prompt="Close-up of fountain with hidden pirate symbol carved in stone, water flowing, mysterious marking, treasure hunt clue, vintage illustration style, detailed stonework"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="14">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Symbol u fontány</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble">Annika: Tady je ten symbol z mapy!</div>
+                    </div>
+
+                    <div class="panel panel-wide">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page04-panel03.jpg"
+                                 alt="Pipi čte vyryté písmo na fontáně"
+                                 data-prompt="Red-haired girl examining carved text on fountain base, leaning close, curious expression, water splashing nearby, adventure scene, children's book style"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="15">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Pipi čte nápis</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">"Kde moudrosti zdroj proudí, tam další stopa čeká..."</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page04-panel04.jpg"
+                                 alt="Tommy přemýšlí"
+                                 data-prompt="Blonde boy (Tommy) thinking hard, hand on chin, thoughtful expression, lightbulb moment, children's book character, retro illustration style"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="16">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Tommy přemýšlí</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble">Tommy: Zdroj moudrosti... To je určitě knihovna!</div>
+                        <div class="sound-effect">EUREKA!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 5: Druhá stopa - v knihovně -->
+            <div class="page" data-page="5">
+                <div class="panel-grid">
+                    <div class="panel panel-large">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page05-panel01.jpg"
+                                 alt="Velká stará knihovna"
+                                 data-prompt="Grand old library interior, tall bookshelves, vintage furniture, warm lighting from windows, dust particles in sunbeams, classic architecture, children's book illustration, magical atmosphere"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="17">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Městská knihovna</span>
+                            </div>
+                        </div>
+                        <div class="caption">Ve staré městské knihovně...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page05-panel02.jpg"
+                                 alt="Knihovnice s brýlemi"
+                                 data-prompt="Elderly librarian with glasses, kind smile, vintage clothing, holding books, gentle expression, children's book character, warm and friendly atmosphere"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="18">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Knihovnice</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble">Knihovnice: Hledáte něco konkrétního?</div>
+                    </div>
+
+                    <div class="panel panel-tall">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page05-panel03.jpg"
+                                 alt="Děti hledají mezi regály"
+                                 data-prompt="Children searching through tall bookshelves in library, reaching for books, adventurous spirit, vintage children's book illustration, warm library lighting, sense of mystery"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="19">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Hledání v regálech</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Hledáme staré námořnické knihy!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page05-panel04.jpg"
+                                 alt="Stará kniha s další mapou uvnitř"
+                                 data-prompt="Old maritime book open revealing hidden map page, antique illustrations, nautical theme, weathered paper, treasure hunt clue, vintage book illustration style"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="20">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Kniha s mapou</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble">Annika: V téhle knize je další nápověda!</div>
+                        <div class="sound-effect">BINGO!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 6: Inspektor Klumpr zasahuje -->
+            <div class="page" data-page="6">
+                <div class="panel-grid">
+                    <div class="panel panel-wide">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page06-panel01.jpg"
+                                 alt="Inspektor Klumpr v úřadu"
+                                 data-prompt="Stern inspector character in office, bureaucratic setting, papers and files, serious expression, vintage children's book villain style, humorous portrayal, comic illustration"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="21">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Inspektor v kanceláři</span>
+                            </div>
+                        </div>
+                        <div class="caption">Mezitím v inspektorově kanceláři...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page06-panel02.jpg"
+                                 alt="Inspektor Klumpr číst hlášení"
+                                 data-prompt="Inspector reading report with shocked expression, eyes wide, dramatic reaction, children's book humor, exaggerated facial features, comic style"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="22">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Šokovaný inspektor</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble inspector-bubble">Co?! Pipi hledá poklad?!</div>
+                        <div class="sound-effect">ŠOK!</div>
+                    </div>
+
+                    <div class="panel panel-large">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page06-panel03.jpg"
+                                 alt="Inspektor Klumpr běží ulicí"
+                                 data-prompt="Inspector running through town street, coat flying behind, determined expression, vintage town setting, comic action scene, children's book illustration, humorous portrayal"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="23">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Inspektor běží</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble inspector-bubble">Historický poklad patří do muzea! Musím je zastavit!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page06-panel04.jpg"
+                                 alt="Don Pablo pozoruje z větve"
+                                 data-prompt="Colorful parrot perched on tree branch, watchful expression, looking down at street scene, dramatic perspective, children's book illustration, adventure atmosphere"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="24">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Don Pablo hlídá</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble parrot-bubble">KRÁÁÁ! Varování! Inspektor se blíží!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 7: Třetí stopa - v parku -->
+            <div class="page" data-page="7">
+                <div class="panel-grid">
+                    <div class="panel panel-large">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page07-panel01.jpg"
+                                 alt="Velký starý strom v parku"
+                                 data-prompt="Ancient oak tree in park, twisted trunk, lush green canopy, playground in background, sunny day, children's book setting, magical and inviting atmosphere"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="25">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Starý strom v parku</span>
+                            </div>
+                        </div>
+                        <div class="caption">U stoletého dubu v městském parku...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page07-panel02.jpg"
+                                 alt="Vyřezaná značka ve stromu"
+                                 data-prompt="Close-up of carved nautical symbol in old tree bark, weathered marking, X mark, treasure clue, detailed wood texture, vintage illustration style"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="26">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Značka ve stromu</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Tady je tatínkův symbol!</div>
+                    </div>
+
+                    <div class="panel panel-wide">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page07-panel03.jpg"
+                                 alt="Pipi šplhá na strom"
+                                 data-prompt="Red-haired girl climbing tall tree, agile movement, adventurous pose, mismatched stockings visible, children's book action scene, dynamic composition, playful energy"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="27">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Pipi na stromě</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Vyšplhám se nahoru podívat!</div>
+                        <div class="sound-effect">ŠPLH ŠPLH!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page07-panel04.jpg"
+                                 alt="Výhled ze stromu na radnici"
+                                 data-prompt="Bird's eye view from tree top showing town hall building with tower, vintage European architecture, rooftops, town square visible, children's book illustration, adventurous perspective"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="28">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Výhled na radnici</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Vidím to! Symbol ukazuje na radnici!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page07-panel05.jpg"
+                                 alt="Inspektor se objevuje v parku"
+                                 data-prompt="Inspector appearing in park, huffing and puffing, tired from running, comic relief moment, children's book humor, exaggerated tired expression"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="29">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Vyčerpaný inspektor</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble inspector-bubble">Pipi! Stůj! *haf haf*</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 8: U cíle - sklep pod radnicí -->
+            <div class="page" data-page="8">
+                <div class="panel-grid">
+                    <div class="panel panel-wide">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page08-panel01.jpg"
+                                 alt="Staré schodiště do sklepa radnice"
+                                 data-prompt="Old stone staircase descending into cellar, torch lighting, medieval architecture, mysterious atmosphere, adventure setting, children's book illustration, exciting discovery moment"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="30">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Schodiště do sklepa</span>
+                            </div>
+                        </div>
+                        <div class="caption">Ve starém sklepě pod radnicí...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page08-panel02.jpg"
+                                 alt="Děti s lucernou ve sklepě"
+                                 data-prompt="Three children with lantern in dark cellar, shadows on walls, adventurous exploration, treasure hunt atmosphere, vintage children's book style, sense of discovery"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="31">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Ve sklepě s lucernou</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble">Tommy: Je tu docela tma...</div>
+                    </div>
+
+                    <div class="panel panel-tall">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page08-panel03.jpg"
+                                 alt="Velká stará truhla s pirátskými symboly"
+                                 data-prompt="Large ornate treasure chest in cellar, nautical decorations, brass fittings, pirate symbols, dramatic lighting, dust particles in light beam, children's book treasure discovery scene"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="32">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Pokladová truhla</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">TADY JE!</div>
+                        <div class="sound-effect huge">HURÁÁÁ!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page08-panel04.jpg"
+                                 alt="Inspektor Klumpr přichází do sklepa"
+                                 data-prompt="Inspector entering cellar cautiously, official stance, concerned expression, holding paperwork, children's book character, humorous authority figure"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="33">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Inspektor přichází</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble inspector-bubble">Čekejte! Než ten poklad otevřete...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 9: Otevření pokladu -->
+            <div class="page" data-page="9">
+                <div class="panel-grid">
+                    <div class="panel panel-large">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page09-panel01.jpg"
+                                 alt="Otevřená truhla plná kuriózních předmětů"
+                                 data-prompt="Open treasure chest filled with exotic artifacts, not gold but curious objects from around the world, masks, sculptures, vintage items, magical glow, children's book illustration, wonder and discovery"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="34">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Obsah truhly</span>
+                            </div>
+                        </div>
+                        <div class="caption">Pipi pomalu otevírá truhlu...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page09-panel02.jpg"
+                                 alt="Všichni překvapeni obsahem"
+                                 data-prompt="Children and inspector looking surprised at treasure chest contents, amazed expressions, gathered around open chest, warm lighting, children's book illustration, moment of revelation"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="35">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Překvapení všech</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble">Všichni: Ooooh!</div>
+                    </div>
+
+                    <div class="panel panel-wide">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page09-panel03.jpg"
+                                 alt="Exotické artefakty a kuriozity"
+                                 data-prompt="Collection of exotic artifacts: tribal masks, ancient instruments, unusual sculptures, foreign coins, colorful fabrics, vintage travel treasures, children's book illustration, rich details and colors"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="36">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Exotické předměty</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">To nejsou zlato... to jsou tatínkovy vzpomínky z cest!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page09-panel04.jpg"
+                                 alt="Inspektor Klumpr nadšený"
+                                 data-prompt="Inspector with excited expression, eyes sparkling, official demeanor melting into genuine enthusiasm, children's book character transformation, heartwarming moment"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="37">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Nadšený inspektor</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble inspector-bubble">To jsou úžasné etnografické exponáty! Patří do muzea!</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page09-panel05.jpg"
+                                 alt="Pipi s úsměvem souhlasí"
+                                 data-prompt="Red-haired girl (Pipi) smiling warmly, happy agreement, generous gesture, kind expression, children's book character showing maturity and wisdom, heartwarming scene"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="38">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Pipi souhlasí</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble pipi-bubble">Máte pravdu! Ať je mohou vidět všichni!</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stránka 10: Epilog - Výstava v muzeu -->
+            <div class="page" data-page="10">
+                <div class="panel-grid">
+                    <div class="panel panel-large">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page10-panel01.jpg"
+                                 alt="Muzeum s novou výstavou"
+                                 data-prompt="Museum interior with new exhibition display, artifacts beautifully arranged in glass cases, visitors admiring, bright lighting, welcoming atmosphere, children's book illustration, celebration of discovery"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="39">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Výstava v muzeu</span>
+                            </div>
+                        </div>
+                        <div class="caption">O týden později...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page10-panel02.jpg"
+                                 alt="Cedule výstavy"
+                                 data-prompt="Museum exhibition sign reading 'Captain Efraim Longstocking's World Treasures', elegant vintage typography, official museum display, children's book illustration detail"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="40">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Cedule výstavy</span>
+                            </div>
+                        </div>
+                        <div class="caption">"Světové poklady kapitána Efraima Dlouhápunčocha"</div>
+                    </div>
+
+                    <div class="panel panel-wide">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page10-panel03.jpg"
+                                 alt="Návštěvníci obdivují exponáty"
+                                 data-prompt="Families and children viewing museum exhibition with wonder, pointing at displays, educational and joyful atmosphere, diverse visitors, children's book illustration, community celebration"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="41">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Návštěvníci muzea</span>
+                            </div>
+                        </div>
+                        <div class="caption">Lidé z celého města přicházejí obdivovat poklady...</div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page10-panel04.jpg"
+                                 alt="Pipi, Tommy, Annika a inspektor spolu"
+                                 data-prompt="Group photo of all characters together smiling: red-haired girl (Pipi), blonde boy (Tommy), blonde girl (Annika), inspector, and parrot, happy ending scene, friendship and cooperation, children's book illustration"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="42">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Všichni společně</span>
+                            </div>
+                        </div>
+                        <div class="speech-bubble inspector-bubble">Díky vám, Pipi, máme nejlepší výstavu!</div>
+                    </div>
+
+                    <div class="panel panel-wide">
+                        <div class="image-panel">
+                            <img src="images/episode-02/page10-panel03.jpg"
+                                 alt="Záběr muzea při západu slunce"
+                                 data-prompt="Museum building exterior at sunset, warm golden light, people leaving happily, town setting, peaceful ending scene, children's book illustration, sense of accomplishment and community"
+                                 class="comic-image">
+                            <div class="image-placeholder" data-image="43">
+                                <span class="placeholder-icon">🖼️</span>
+                                <span class="placeholder-text">Muzeum při západu</span>
+                            </div>
+                        </div>
+                        <div class="caption">A tak poklad kapitána Efraima našel nový domov...</div>
+                    </div>
+
+                    <div class="panel final-panel">
+                        <div class="the-end">KONEC</div>
+                        <div class="caption">Příště: Pipi a záhada kouzelné zahrady!</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigace -->
+        <div class="comic-navigation">
+            <button id="prevBtn" class="nav-button" disabled>
+                <span class="arrow">←</span>
+                <span class="label">Předchozí</span>
+            </button>
+
+            <div class="page-dots" id="pageDots"></div>
+
+            <button id="nextBtn" class="nav-button">
+                <span class="label">Další</span>
+                <span class="arrow">→</span>
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="comic-footer">
+            <p>© 2024 Dobrodružství Pipi - Epizoda 2 | Autorsky originální dílo</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

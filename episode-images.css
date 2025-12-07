@@ -1,0 +1,179 @@
+/* ========================================
+   EPISODE IMAGES CSS
+   Styly pro epizody s AI generovanými obrázky
+   ======================================== */
+
+/* Image panel kontejner */
+.image-panel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F5F5F5;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Actual comic image */
+.comic-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.comic-image:hover {
+    transform: scale(1.02);
+}
+
+/* Image placeholder (zobrazí se když obrázek neexistuje) */
+.image-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #E8E8E8 0%, #F5F5F5 100%);
+    border: 3px dashed #CCCCCC;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Skrýt placeholder když obrázek existuje */
+.comic-image[src]:not([src=""]):not([src$=".jpg"]):not([src$=".png"]):not([src$=".webp"]) + .image-placeholder {
+    display: flex;
+}
+
+img.comic-image {
+    position: relative;
+    z-index: 2;
+}
+
+/* Když obrázek selže načtení, zobraz placeholder */
+img.comic-image:not([src]),
+img.comic-image[src=""],
+img.comic-image[alt]:not([src*="/"]) {
+    opacity: 0;
+    position: absolute;
+}
+
+.placeholder-icon {
+    font-size: 4rem;
+    opacity: 0.5;
+}
+
+.placeholder-text {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+    max-width: 80%;
+    line-height: 1.4;
+}
+
+/* Pomocné atributy pro prompty (neviditelné) */
+[data-prompt] {
+    position: relative;
+}
+
+/* Loading state */
+.image-panel.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 5;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Error state */
+.comic-image.error {
+    display: none;
+}
+
+.comic-image.error + .image-placeholder {
+    display: flex;
+    background: linear-gradient(135deg, #FFE5E5 0%, #FFF0F0 100%);
+    border-color: #FFCCCC;
+}
+
+.comic-image.error + .image-placeholder .placeholder-icon::before {
+    content: '⚠️';
+}
+
+/* Success state - hide placeholder */
+.comic-image.loaded {
+    opacity: 1;
+}
+
+.comic-image.loaded + .image-placeholder {
+    display: none;
+}
+
+/* ========================================
+   RESPONZIVNÍ ÚPRAVY
+   ======================================== */
+
+@media (max-width: 768px) {
+    .image-panel {
+        min-height: 150px;
+    }
+
+    .placeholder-icon {
+        font-size: 3rem;
+    }
+
+    .placeholder-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-panel {
+        min-height: 120px;
+    }
+
+    .placeholder-icon {
+        font-size: 2.5rem;
+    }
+
+    .placeholder-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    .image-placeholder {
+        display: none !important;
+    }
+
+    .comic-image {
+        page-break-inside: avoid;
+    }
+}

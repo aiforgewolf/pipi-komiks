@@ -297,6 +297,13 @@
     animation: pulse 2s ease-in-out infinite;
 }
 
+.episode-badge.ai-badge {
+    top: 60px;
+    background: linear-gradient(135deg, #9D50BB 0%, #6E48AA 100%);
+    color: white;
+    font-size: 0.75rem;
+}
+
 /* Informace o epizodě */
 .episode-info {
     padding: 25px;
