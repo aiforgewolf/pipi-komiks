@@ -89,6 +89,52 @@ body {
     100% { transform: translate(50px, 50px); }
 }
 
+/* Back button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-color);
+    text-decoration: none;
+    border: 3px solid var(--text-color);
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.back-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+.back-button:active {
+    transform: translateY(0);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.back-arrow {
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover .back-arrow {
+    transform: translateX(-3px);
+}
+
+.back-text {
+    font-family: inherit;
+}
+
 .comic-title {
     font-size: 2.5rem;
     color: white;
@@ -1106,6 +1152,21 @@ body {
 @media (max-width: 768px) {
     .comic-title {
         font-size: 1.8rem;
+    }
+
+    .back-button {
+        top: 15px;
+        left: 15px;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    .back-text {
+        display: none;
+    }
+
+    .back-arrow {
+        font-size: 1.3rem;
     }
 
     .panel-grid {
