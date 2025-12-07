@@ -689,6 +689,73 @@ body {
     content: '🥖 PEKÁRNA 🥐';
 }
 
+/* Stopa ve tvaru rybí kosti */
+.footprint.fish-shaped {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    margin: 20px auto;
+}
+
+.footprint.fish-shaped::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 120px;
+    background:
+        /* Hlavní otisk boty */
+        linear-gradient(180deg, #8B7355 0%, #A0826D 100%);
+    border-radius: 40px 40px 20px 20px;
+    border: 3px solid var(--text-color);
+    opacity: 0.7;
+}
+
+/* Rybí kost pattern uvnitř */
+.footprint.fish-shaped::after {
+    content: '🐟';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-size: 60px;
+    opacity: 0.4;
+    filter: grayscale(100%);
+}
+
+/* Alternativně - detailnější CSS ilustrace rybí kosti */
+.footprint.fish-shaped {
+    background:
+        /* Páteř */
+        linear-gradient(90deg, transparent 48%, #8B7355 48%, #8B7355 52%, transparent 52%),
+        /* Žebra */
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 8px,
+            #8B7355 8px,
+            #8B7355 10px,
+            transparent 10px,
+            transparent 20px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 8px,
+            #8B7355 8px,
+            #8B7355 10px,
+            transparent 10px,
+            transparent 20px
+        );
+    background-size: 100% 100%, 50% 100%, 50% 100%;
+    background-position: center, left center, right center;
+    border: 3px dashed #654321;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* ========================================
    BUBLINY S TEXTEM
    ======================================== */
