@@ -1,0 +1,635 @@
+/* ========================================
+   LANDING PAGE STYLY
+   ======================================== */
+
+/* Resetování pro landing page */
+.landing-page {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 0;
+}
+
+/* ========================================
+   HLAVIČKA
+   ======================================== */
+
+.landing-header {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+    padding: 80px 20px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.landing-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(255, 255, 255, 0.05) 20px,
+        rgba(255, 255, 255, 0.05) 40px
+    );
+    animation: slide 30s linear infinite;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.main-title {
+    margin-bottom: 20px;
+}
+
+.title-main {
+    display: block;
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.title-subtitle {
+    display: block;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
+    font-weight: normal;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Plovoucí emoji */
+.header-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-emoji {
+    position: absolute;
+    font-size: 3rem;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.3;
+}
+
+.floating-emoji:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-emoji:nth-child(2) {
+    top: 60%;
+    right: 15%;
+    animation-delay: 1.5s;
+}
+
+.floating-emoji:nth-child(3) {
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 3s;
+}
+
+.floating-emoji:nth-child(4) {
+    top: 40%;
+    right: 10%;
+    animation-delay: 4.5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+}
+
+/* ========================================
+   HLAVNÍ OBSAH
+   ======================================== */
+
+.episodes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Úvodní sekce */
+.intro-section {
+    text-align: center;
+    margin-bottom: 60px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border: 4px solid var(--text-color);
+}
+
+.intro-section h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 0 var(--accent-color);
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ========================================
+   GRID S EPIZODAMI
+   ======================================== */
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+/* Karta epizody */
+.episode-card {
+    background: white;
+    border: 4px solid var(--text-color);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.episode-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.episode-card.coming-soon {
+    opacity: 0.7;
+}
+
+.episode-card.coming-soon:hover {
+    transform: translateY(-5px);
+}
+
+/* Číslo epizody */
+.episode-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 3px solid var(--text-color);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+/* Náhled */
+.episode-thumbnail {
+    height: 250px;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #45B7AA 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.thumbnail-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.thumbnail-pipi {
+    font-size: 80px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.thumbnail-briefcase {
+    font-size: 60px;
+    animation: wiggle 3s ease-in-out infinite;
+}
+
+.thumbnail-magnifier {
+    font-size: 50px;
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+/* Coming soon náhled */
+.coming-soon-content {
+    flex-direction: column;
+    background: linear-gradient(135deg, #999 0%, #bbb 100%);
+}
+
+.coming-soon-icon {
+    font-size: 80px;
+}
+
+.coming-soon-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Badge */
+.episode-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    border: 3px solid var(--text-color);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.episode-badge.new {
+    background: var(--accent-color);
+    color: var(--text-color);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Informace o epizodě */
+.episode-info {
+    padding: 25px;
+}
+
+.episode-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.episode-description {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* Metadata */
+.episode-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #F8F8F8;
+    border-radius: 10px;
+    border: 2px solid #E0E0E0;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.meta-icon {
+    font-size: 1.1rem;
+}
+
+/* Tlačítko číst */
+.read-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #FF8E53 100%);
+    color: white;
+    border: 3px solid var(--text-color);
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.read-button:hover:not(.disabled) {
+    transform: translateY(-3px);
+    box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.15);
+}
+
+.read-button:active:not(.disabled) {
+    transform: translateY(0);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
+}
+
+.read-button.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.button-icon {
+    font-size: 1.3rem;
+}
+
+.button-arrow {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.read-button:hover:not(.disabled) .button-arrow {
+    transform: translateX(5px);
+}
+
+/* ========================================
+   FEATURES SEKCE
+   ======================================== */
+
+.features-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 60px 40px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    border: 4px solid var(--text-color);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.features-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-shadow: 3px 3px 0 var(--accent-color);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border: 3px solid var(--text-color);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ========================================
+   O PROJEKTU SEKCE
+   ======================================== */
+
+.about-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 60px 40px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    border: 4px solid var(--text-color);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 0 var(--accent-color);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.about-content strong {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.landing-footer {
+    background: var(--text-color);
+    color: white;
+    padding: 60px 20px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.footer-section p {
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.footer-section a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom p {
+    opacity: 0.8;
+    margin: 5px 0;
+}
+
+.footer-love {
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-top: 10px !important;
+}
+
+/* ========================================
+   RESPONZIVNÍ DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    .title-main {
+        font-size: 2.5rem;
+    }
+
+    .title-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .episodes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-section h2,
+    .features-section h2,
+    .about-section h2 {
+        font-size: 2rem;
+    }
+
+    .intro-section,
+    .features-section,
+    .about-section {
+        padding: 30px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-header {
+        padding: 60px 15px 40px;
+    }
+
+    .title-main {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .title-subtitle {
+        font-size: 1rem;
+    }
+
+    .episodes-container {
+        padding: 40px 15px;
+    }
+
+    .episode-thumbnail {
+        height: 200px;
+    }
+
+    .thumbnail-pipi {
+        font-size: 60px;
+    }
+
+    .thumbnail-briefcase {
+        font-size: 45px;
+    }
+
+    .thumbnail-magnifier {
+        font-size: 35px;
+    }
+}
