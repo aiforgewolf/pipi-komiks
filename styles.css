@@ -206,6 +206,16 @@ body {
    SCÉNY
    ======================================== */
 
+/* Z-INDEX HIERARCHIE:
+   - .scene (pozadí): z-index: 1
+   - Objekty (.villa, .horse, .briefcase, atd.): z-index: 5
+   - .character (postavy): z-index: 5
+   - .speech-bubble (bubliny): z-index: 10
+   - .caption (titulky): z-index: 15
+   - .sound-effect (zvukové efekty): z-index: 20
+   - .title-overlay (nadpisy): z-index: 10
+*/
+
 .scene {
     width: 100%;
     height: 100%;
@@ -216,6 +226,13 @@ body {
     justify-content: center;
     overflow: hidden;
     border-radius: 8px;
+    z-index: 1;
+}
+
+/* Všechny přímé potomky scény (objekty) mají vyšší z-index než pozadí */
+.scene > * {
+    position: relative;
+    z-index: 5;
 }
 
 /* Pozadí scén */
@@ -272,6 +289,7 @@ body {
     width: 80px;
     height: 120px;
     margin: 10px;
+    z-index: 5;
 }
 
 /* PIPI */
@@ -685,6 +703,7 @@ body {
     font-size: 0.95rem;
     line-height: 1.4;
     box-shadow: 3px 3px 0 var(--shadow-color);
+    z-index: 10;
 }
 
 .speech-bubble::before {
@@ -772,6 +791,7 @@ body {
     font-style: italic;
     text-align: center;
     box-shadow: 2px 2px 0 var(--shadow-color);
+    z-index: 15;
 }
 
 .sound-effect {
@@ -782,6 +802,7 @@ body {
     text-shadow: 2px 2px 0 white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white;
     transform: rotate(-10deg);
     animation: bounce 0.5s ease infinite alternate;
+    z-index: 20;
 }
 
 @keyframes bounce {
