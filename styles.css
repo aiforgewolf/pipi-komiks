@@ -276,6 +276,37 @@ body {
     background: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 100%);
 }
 
+.neighbor-window {
+    background: linear-gradient(180deg, #F5DEB3 0%, #DEB887 100%);
+    position: relative;
+}
+
+.neighbor-window::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 70%;
+    background: #87CEEB;
+    border: 6px solid #8B4513;
+    border-radius: 8px;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.neighbor-window::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 3px;
+    background: #8B4513;
+    z-index: 2;
+}
+
 .final {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
@@ -402,6 +433,41 @@ body {
     left: 50%;
     transform: translateX(-50%);
     font-size: 35px;
+}
+
+/* Soused */
+.character.neighbor {
+    width: 70px;
+    height: 90px;
+    z-index: 10;
+}
+
+.character.neighbor::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 60px;
+    background: #5D8AA8;
+    border-radius: 25px 25px 0 0;
+    border: 3px solid var(--text-color);
+}
+
+.character.neighbor::after {
+    content: '👨';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    animation: peekaboo 3s ease-in-out infinite;
+}
+
+@keyframes peekaboo {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-5px); }
 }
 
 /* Papoušek */
