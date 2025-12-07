@@ -6,6 +6,12 @@
 ![License](https://img.shields.io/badge/license-proprietary-blue)
 ![Version](https://img.shields.io/badge/version-1.0.0-orange)
 
+## 🌐 Živá Demo Verze
+
+**👉 [Otevřít komiks online](https://aiforgewolf.github.io/pipi-komiks/)**
+
+*Po aktivaci GitHub Pages bude komiks dostupný na výše uvedeném odkazu. Návod k aktivaci najdete v [DEPLOYMENT.md](DEPLOYMENT.md).*
+
 ## 🎨 O projektu
 
 **Pipi a záhada zmizelého kufru** je autorsky originální interaktivní komiks vytvořený speciálně pro dětské čtenáře. Příběh sleduje dobrodružství hyperaktivní dívky Pipi a jejích přátel při hledání ztraceného kufru.
